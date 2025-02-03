@@ -3,8 +3,12 @@ import { useState } from 'react';
 import Link from 'next/link'
 import Header from "../components/Header"
 
+
 const page = () => {
-  const [isLogin, setIsLogin] = useState(true);  // Toggle between login and sign-up
+
+    const links=[
+    ];
+    const [isLogin, setIsLogin] = useState(true);  // Toggle between login and sign-up
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
@@ -37,10 +41,10 @@ const page = () => {
 
     return (
         <div>
-        <Header></Header>
+        <Header links={links}></Header>
         <div className="flex justify-center items-center min-h-screen">
             <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
-                <h2 className="text-2xl font-bold text-center mb-6">
+                <h2 className="text-2xl font-bold text-center mb-6 text-black">
                     {isLogin ? 'Login' : 'Sign Up'}
                 </h2>
                 <form onSubmit={isLogin ? handleSubmitLogin : handleSubmitSignUp}>
@@ -95,7 +99,7 @@ const page = () => {
           className={`relative z-10 w-1/2 text-center text-lg font-semibold transition-all 
             ${userType === "buyer" ? "text-green-500" : "text-white"}`}
         >
-          Buyer
+          Consumer
         </button>
 
         {/* Investor Button */}
@@ -104,7 +108,7 @@ const page = () => {
           className={`relative z-10 w-1/2 text-center text-lg font-semibold transition-all 
             ${userType === "investor" ? "text-green-500" : "text-white"}`}
         >
-          Investor
+          Harvester
         </button>
       </div></div>
 
