@@ -5,10 +5,10 @@ import { Button } from "./Button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const images = [
-  "/images/photo1.jpg",
-  "/images/photo2.jpg",
-  "/images/photo3.jpg",
-  "/images/photo4.jpg",
+  "./images/photo1.jpg",
+  "./images/photo2.jpg",
+  "./images/photo3.jpg",
+  "./images/photo4.jpg",
 ];
 
 export default function PhotoSlide() {
