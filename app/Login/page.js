@@ -81,7 +81,7 @@ const page = () => {
                     )}
 
                     <div className="flex items-center justify-center mb-2">
-                    <div className="relative w-[70%] h-12 bg-green-500 rounded-full p-1 flex items-center">
+                    <div className="relative w-[70%] h-12 bg-green-300 rounded-full p-1 flex items-center">
         {/* Sliding Indicator */}
         <div
   className={`absolute w-[48.5%] h-10 rounded-full bg-blue-500 transition-transform duration-300 ease-in-out 
@@ -111,7 +111,7 @@ const page = () => {
                     {error && <p className="text-red-500 text-sm mb-4">{error}</p>}
                     <button
                         type="submit"
-                        className="w-full bg-clrbtn text-white py-3 rounded-lg hover:bg-blue-600 focus:outline-none"
+                        className="hover:bg-green-400 hover:shadow-md hover:shadow-green-200 w-full bg-clrbtn text-white py-3 rounded-lg hover:bg-secondary  focus:outline-none"
                     >
                         {isLogin ? 'Login' : 'Sign Up'}
                     </button>

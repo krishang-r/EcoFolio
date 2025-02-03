@@ -5,13 +5,13 @@ import { Button } from "./Button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const images = [
-  "./images/photo1.jpg",
-  "./images/photo2.jpg",
-  "./images/photo3.jpg",
-  "./images/photo4.jpg",
+  "/photo1.png",
+  "/photo2.jpeg",
+  "/photo3.jpg",
+  "/photo4.jpg",
 ];
 
-export default function PhotoSlide() {
+export default function ImageSlider() {
   const [index, setIndex] = useState(0);
 
   const nextSlide = () => {
@@ -23,7 +23,7 @@ export default function PhotoSlide() {
   };
 
   return (
-    <div className="relative w-full max-w-lg mx-auto overflow-hidden rounded-2xl shadow-lg">
+    <div className="relative w-full h-[80vh] mx-auto overflow-hidden mt-1 shadow-lg">
       <AnimatePresence>
         <motion.img
           key={images[index]}
