@@ -12,7 +12,7 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
         clrbtn: "#00c681",
-        secondary: "#5re49f",
+        secondary: "#59e49f",
       },
     },
   },
