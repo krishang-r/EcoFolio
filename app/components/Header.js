@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Header = ({ links }) => {
   return (
-    <div className="sticky top-0">
+    <div className="sticky top-0 bg-white">
       <div className="h-[10vh] px-1 flex shadow-md shadow-gray-500 rounded-lg sticky">
         <Link href="/" className="flex items-start justify-start w-[80%] pt-2 px-2">
           <img src="/Ecofolio-header.png" alt="Ecofolio logo" className="object-contain max-h-[80%]" />
