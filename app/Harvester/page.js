@@ -3,34 +3,52 @@ import { useState } from 'react';
 import Link from 'next/link'
 import Header from "../components/Header"
 import Footer from '../components/Footer'
+import PieChartCustom from "../components/PieChartCustom"
+import Wallet from "../components/Dashboard/Wallet"
+import Available from "../components/Dashboard/Available"
+import Sellers from "../components/Dashboard/Sellers"
+import WorldMap from "../components/Dashboard/WorldMap"
+import CustomCreditsChart from "../components/Dashboard/CustomCreditsChart"
+import Grid_1 from "../components/Dashboard/Grid_1"
 
 const page = () => {
+  const blocks = [
+    { id: 1, bg: "bg-white", col: "col-span-1", row: "row-span-1", content: <Wallet/> },
+    { id: 2, bg: "bg-white", col: "col-span-1", row: "row-span-2", content: <Sellers /> },
+    { id: 3, bg: "bg-white", col: "col-span-1", row: "row-span-2", content: <div className='w-full h-full'><PieChartCustom completed={70} total={100}/></div>},
+    { id: 4, bg: "bg-white", col: "col-span-1", row: "row-span-2", content: "📅 Calendar" },
+    { id: 5, bg: "bg-white", col: "col-span-1", row: "row-span-1", content: <Available /> },
+    { id: 6, bg: "bg-white", col: "col-span-2", row: "row-span-1", content: <p className="text-sm">This block spans 2 rows & cols</p> },
+    { id: 7, bg: "bg-white", col: "col-span-2", row: "row-span-1", content: <WorldMap /> },
+  ];
   return (
     <div className='h-screen'>
         <Header />
-        <div className='container w-screen mx-auto my-7 text-green-400 font-bold text-5xl text-center'>
-            Welcome Harvester!!!
+        <div className='container w-screen mx-auto my-7 text-green-600 font-bold text-5xl text-center font-[Century Gothic]'>
+            Welcome Harvester
         </div>
 
-        <div class="flex space-x-4 p-4 w-[90%] mx-auto text-xl">
-          <div class="w-1/2 p-6 text-green-800 rounded-lg">
-          Carbon emission points represent the amount of CO₂ or other greenhouse gases released due to activities 
-          like burning fossil fuels. These points are tracked in carbon markets, where companies buy and sell carbon 
-          credits to meet emission limits. Higher CO₂ emissions result in more carbon emission points, which must be 
-          managed to reduce environmental impact.
-          <br></br>
-          <br></br>
-          Renewable energy sources like solar, wind, hydropower, and geothermal produce little to no CO₂, making them 
-          essential for reducing emissions. 
+        <div className='flex items-center justify-space w-full ml-[80px]'>
+        <div className='w-[40%]'>
+            <Grid_1 />
           </div>
+          <div className='w-[60%] h-[80%]'><WorldMap /></div>
+        </div>
 
-          <div class="w-1/2 p-6 text-green-800 rounded-lg">
-          By increasing renewable energy use, we lower the demand for carbon emission points, which helps reduce the 
-          global carbon footprint and achieve climate goals.
-          <br></br>
-          Through carbon offset programs, renewable energy projects generate carbon credits, allowing businesses to offset their emissions. This incentivizes investment in clean energy and helps reduce reliance on fossil fuels, contributing to a more sustainable energy future.
+        <div className='flex items-center justify-evenly w-full mt-[50px] ml-[80px]'>
+          <div className='w-[40%]'><CustomCreditsChart/></div>
+          <div className='mr-9 w-[60%]'>
+            <h2 className='text-center text-green-800 font-semibold text-xl'>Previous Year Goal</h2>
+            <PieChartCustom completed={70} total={100}/>
           </div>
         </div>
+        {/* <div className="grid grid-cols-4 grid-rows-[20%_20%_55%] gap-4 p-3 m-auto bg-gray-100 h-screen">
+      {blocks.map(({ id, bg, col, row, content }) => (
+        <div key={id} className={`flex items-center justify-center text-secondary font-bold ${bg} ${col} ${row} p-5 rounded-md shadow-md`}>
+          {content}
+        </div>
+      ))}
+    </div> */}
 
         <Footer />
     </div>

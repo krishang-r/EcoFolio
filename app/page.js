@@ -1,6 +1,7 @@
 import Header from "./components/Header";
 import ImageSlider from "./components/ImageSlider";
 import Footer from "./components/Footer";
+import Content from "./components/Homepage/Content"
 
 export default function Home() {
   const images = [
@@ -19,6 +20,7 @@ export default function Home() {
       {/* Pass links correctly */}
       <Header links={links} />
       <ImageSlider images={images} />
+      <Content />
       <Footer />
     </div>
   );
