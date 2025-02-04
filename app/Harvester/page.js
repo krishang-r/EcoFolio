@@ -27,9 +27,11 @@ const page = () => {
             Welcome Harvester
         </div>
 
-        <div className='flex items-center justify-center w-full'>
-          <div></div>
-          <div className='w-[40%]'><WorldMap /></div>
+        <div className='flex items-center justify-space w-full'>
+          <div className='mr-9'>
+            <img src='/carbon_coin.png'></img>
+          </div>
+          <div className='w-[60%] h-[80%]'><WorldMap /></div>
         </div>
 
         <div className='flex items-center justify-evenly w-full'>
