@@ -3,7 +3,7 @@ import React from 'react'
 const Sellers = () => {
   return (
     <div className=" text-center">
-        <div className="font-extrabold text-green-600 text-3xl">
+        <div className="font-extrabold text-white text-3xl">
             Top Buyers based on Sectors
         </div>
         <div className="mt-4 text-md">

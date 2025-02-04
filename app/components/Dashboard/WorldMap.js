@@ -24,8 +24,8 @@ export default function WorldMap() {
   }, []);
 
   return (
-    <div className="w-[95%] h-full flex flex-col items-center p-4">
-      <h2 className="text-lg font-bold mb-2">World Map</h2>
+    <div className="w-[85%] h-[50%] flex flex-col items-center p-4">
+      {/* <h2 className="text-lg font-bold mb-2">World Map</h2> */}
       <ComposableMap projectionConfig={{ scale: 200 }}>
         <Geographies geography="https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json">
           {({ geographies }) =>

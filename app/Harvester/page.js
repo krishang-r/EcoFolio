@@ -9,6 +9,7 @@ import Available from "../components/Dashboard/Available"
 import Sellers from "../components/Dashboard/Sellers"
 import WorldMap from "../components/Dashboard/WorldMap"
 import CustomCreditsChart from "../components/Dashboard/CustomCreditsChart"
+import Grid_1 from "../components/Dashboard/Grid_1"
 
 const page = () => {
   const blocks = [
@@ -27,16 +28,19 @@ const page = () => {
             Welcome Harvester
         </div>
 
-        <div className='flex items-center justify-space w-full'>
-          <div className='mr-9'>
-            <img src='/carbon_coin.png'></img>
+        <div className='flex items-center justify-space w-full ml-[80px]'>
+        <div className='w-[40%]'>
+            <Grid_1 />
           </div>
           <div className='w-[60%] h-[80%]'><WorldMap /></div>
         </div>
 
-        <div className='flex items-center justify-evenly w-full'>
+        <div className='flex items-center justify-evenly w-full mt-[50px] ml-[80px]'>
           <div className='w-[40%]'><CustomCreditsChart/></div>
-          <div className='w-[40%]'><WorldMap /></div>
+          <div className='mr-9 w-[60%]'>
+            <h2 className='text-center text-green-800 font-semibold text-xl'>Previous Year Goal</h2>
+            <PieChartCustom completed={70} total={100}/>
+          </div>
         </div>
         <div className="grid grid-cols-4 grid-rows-[20%_20%_55%] gap-4 p-3 m-auto bg-gray-100 h-screen">
       {blocks.map(({ id, bg, col, row, content }) => (
