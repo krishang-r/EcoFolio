@@ -58,7 +58,7 @@ const CryptoChart = () => {
 
   return (
     <div className="p-4">
-      <h2 className="text-xl text-center w-full font-bold mb-4">Carbon Coin (CBC) Price History</h2>
+      <h2 className="text-2xl text-center w-full font-bold mb-4 text-green-800 ">Carbon Coin (CBC) Price History</h2>
       
       <div className="flex gap-2 mb-4">
         <Button onClick={() => setTimeframe("365")}>1 Year</Button>
