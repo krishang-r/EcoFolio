@@ -8,6 +8,7 @@ import Wallet from "../components/Dashboard/Wallet"
 import Available from "../components/Dashboard/Available"
 import Sellers from "../components/Dashboard/Sellers"
 import WorldMap from "../components/Dashboard/WorldMap"
+import CustomCreditsChart from "../components/Dashboard/CustomCreditsChart"
 
 const page = () => {
   const blocks = [
@@ -26,6 +27,15 @@ const page = () => {
             Welcome Harvester
         </div>
 
+        <div className='flex items-center justify-center w-full'>
+          <div></div>
+          <div className='w-[40%]'><WorldMap /></div>
+        </div>
+
+        <div className='flex items-center justify-evenly w-full'>
+          <div className='w-[40%]'><CustomCreditsChart/></div>
+          <div className='w-[40%]'><WorldMap /></div>
+        </div>
         <div className="grid grid-cols-4 grid-rows-[20%_20%_55%] gap-4 p-3 m-auto bg-gray-100 h-screen">
       {blocks.map(({ id, bg, col, row, content }) => (
         <div key={id} className={`flex items-center justify-center text-secondary font-bold ${bg} ${col} ${row} p-5 rounded-md shadow-md`}>
