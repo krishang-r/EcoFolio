@@ -19,7 +19,7 @@ export default function PieChartCustoms({ completed, total }) {
   ];
 
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center">
+    <div className="w-full h-full flex flex-col items-center justify-center z-[-1]">
       <PieChart width={200} height={250}>
         <Pie
           data={data}
