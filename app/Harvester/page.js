@@ -42,13 +42,13 @@ const page = () => {
             <PieChartCustom completed={70} total={100}/>
           </div>
         </div>
-        <div className="grid grid-cols-4 grid-rows-[20%_20%_55%] gap-4 p-3 m-auto bg-gray-100 h-screen">
+        {/* <div className="grid grid-cols-4 grid-rows-[20%_20%_55%] gap-4 p-3 m-auto bg-gray-100 h-screen">
       {blocks.map(({ id, bg, col, row, content }) => (
         <div key={id} className={`flex items-center justify-center text-secondary font-bold ${bg} ${col} ${row} p-5 rounded-md shadow-md`}>
           {content}
         </div>
       ))}
-    </div>
+    </div> */}
 
         <Footer />
     </div>

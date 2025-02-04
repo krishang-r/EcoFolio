@@ -12,7 +12,7 @@ const Header = ({ links }) => {
         {/* Navigation Links */}
         <div className="flex justify-end items-center  text-white w-[20%]">
           {links?.map((link, index) => (
-            <Link key={index} href={link.href} className="p-1 px-2 rounded-md bg-clrbtn m-2 hover:shadow-md hover:shadow-green-300">
+            <Link key={index} href={link.href} className="p-1 px-2 rounded-md w-[100px] h-[40px] font-bold text-lg text-center pt-[7px] bg-clrbtn m-2 hover:shadow-md hover:shadow-green-300">
               {link.text}
             </Link>
           ))}
