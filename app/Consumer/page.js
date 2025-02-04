@@ -2,6 +2,8 @@
 import Link from "next/link"
 import Header from "../components/Header"
 import CryptoChart from "../components/CryptoChart"
+import Wallet from "../components/Cons/Wallet"
+import Available from "../components/Cons/Available"
 const page = () => {
   return (
     <div>
@@ -13,7 +15,7 @@ const page = () => {
           <div className="w-[60%]"><CryptoChart /></div>
         
         <div>
-          <div className="flex w-full items-center justify-space">
+          <div className="flex w-full items-center justify-between">
             <div>Wallet</div>
             <div>Available</div>
           </div>
